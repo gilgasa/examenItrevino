@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="author" content="Gilberto García Sánchez">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <center>
+        <div class='container-fluid'>
+            <div class='row'>
+                <div class='col table'>
+                    <h3>Tabla de Amortización</h3> <br>
+                    <p style='margin: auto;'>Monto Prestado:</p><input style='margin: auto;' id='monto_prestado'
+                        placeholder='Ej: 1,000,000'> <br><br>
+                    <p style='margin: auto;'>Interes:</p><input style='margin: auto;' id='interes_anual'
+                        placeholder='Ej: 12.5'> <br><br>
+                    <p>Plazo (en meses):</p><input id='plazo' placeholder='Ej: 10'> <br><br> <button
+                        class='btn btn-primary'
+                        onclick="amortizacion_proc(document.getElementById('monto_prestado').value,document.getElementById('interes_anual').value,document.getElementById('plazo').value);">Procesar
+                        Datos</button>
+                </div>
+            </div> <br><br>
+            <div class='row'>
+                <div class='col'>
+                    <table class='table small table-sm text-center table-bordered' style='table-layout: auto;'>
+                        <thead class='table-secondary' style='font-size: 100%; '>
+                            <tr>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Pago</th>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Balance Inicial</th>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Cuota Fija</th>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Intereses</th>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Abono Capital</th>
+                                <th class='table-secondary'
+                                    style='position: sticky; top: -0.5%; display:table-cell; vertical-align:middle;'>
+                                    Balance Final</th>
+                            </tr>
+                        </thead>
+                        <tbody id='Tabla'> </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
